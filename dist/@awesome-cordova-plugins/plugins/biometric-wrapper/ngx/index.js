@@ -1,0 +1,24 @@
+import { __extends } from "tslib";
+import { Injectable } from '@angular/core';
+import { AwesomeCordovaNativePlugin, cordova } from '@awesome-cordova-plugins/core';
+var BiometricWrapper = /** @class */ (function (_super) {
+    __extends(BiometricWrapper, _super);
+    function BiometricWrapper() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    BiometricWrapper.prototype.activateIris = function (args) { return cordova(this, "activateIris", {}, arguments); };
+    BiometricWrapper.prototype.activateFingerprint = function (args) { return cordova(this, "activateFingerprint", {}, arguments); };
+    BiometricWrapper.pluginName = "BiometricWrapper";
+    BiometricWrapper.plugin = "cordova-plugin-biometric";
+    BiometricWrapper.pluginRef = "cordova.plugins.BiometricWrapper";
+    BiometricWrapper.repo = "";
+    BiometricWrapper.install = "";
+    BiometricWrapper.installVariables = [];
+    BiometricWrapper.platforms = ["Android"];
+    BiometricWrapper.decorators = [
+        { type: Injectable }
+    ];
+    return BiometricWrapper;
+}(AwesomeCordovaNativePlugin));
+export { BiometricWrapper };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi9zcmMvQGF3ZXNvbWUtY29yZG92YS1wbHVnaW5zL3BsdWdpbnMvYmlvbWV0cmljLXdyYXBwZXIvbmd4L2luZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxPQUFPLEVBQUUsVUFBVSxFQUFFLE1BQU0sZUFBZSxDQUFDO0FBQzNDLE9BQU8sdUNBQStDLE1BQU0sK0JBQStCLENBQUM7O0lBa0N0RCxvQ0FBMEI7Ozs7SUFROUQsdUNBQVksYUFBQyxJQUFTO0lBV3RCLDhDQUFtQixhQUFDLElBQVM7Ozs7Ozs7OztnQkFwQjlCLFVBQVU7OzJCQWxDWDtFQW1Dc0MsMEJBQTBCO1NBQW5ELGdCQUFnQiIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IEluamVjdGFibGUgfSBmcm9tICdAYW5ndWxhci9jb3JlJztcbmltcG9ydCB7IFBsdWdpbiwgQ29yZG92YSwgQXdlc29tZUNvcmRvdmFOYXRpdmVQbHVnaW4gfSBmcm9tICdAYXdlc29tZS1jb3Jkb3ZhLXBsdWdpbnMvY29yZSc7XG5cbi8qKlxuICogQG5hbWUgQmlvbWV0cmljV3JhcHBlclxuICogQGRlc2NyaXB0aW9uXG4gKiBUaGlzIHBsdWdpbiBjYXB0dXJlIGJpb21ldHJpYyhJcmlzIGFuZCBGaW5nZXJwcmludCkgYW5kIHZhbGlkYXRlIHRoZSB1c2VyLlxuICogTWF5IGJlIHVzZWQgaW4gQmFua2luZyBkb21haW5cbiAqIEB1c2FnZVxuICogYGBgdHlwZXNjcmlwdFxuICogaW1wb3J0IHsgQmlvbWV0cmljV3JhcHBlciB9IGZyb20gJ0Bhd2Vzb21lLWNvcmRvdmEtcGx1Z2lucy9iaW9tZXRyaWMtd3JhcHBlci9uZ3gnO1xuICpcbiAqXG4gKiBjb25zdHJ1Y3Rvcihwcml2YXRlIGJpb21ldHJpY1dyYXBwZXI6IEJpb21ldHJpY1dyYXBwZXIpIHsgfVxuICpcbiAqIC4uLlxuICpcbiAqXG4gKiB0aGlzLmJpb21ldHJpY1dyYXBwZXIuYWN0aXZhdGVJcmlzKHsnUElEX1hNTCc6ICc8cGlkLXhtbC8+J30pXG4gKiAgIC50aGVuKChyZXM6IGFueSkgPT4gKVxuICogICAuY2F0Y2goKGVycm9yOiBhbnkpID0+ICk7XG4gKlxuICogYGBgXG4gKi9cblxuQFBsdWdpbih7XG4gIHBsdWdpbk5hbWU6ICdCaW9tZXRyaWNXcmFwcGVyJyxcbiAgcGx1Z2luOiAnY29yZG92YS1wbHVnaW4tYmlvbWV0cmljJyxcbiAgcGx1Z2luUmVmOiAnY29yZG92YS5wbHVnaW5zLkJpb21ldHJpY1dyYXBwZXInLFxuICByZXBvOiAnJyxcbiAgaW5zdGFsbDogJycsXG4gIGluc3RhbGxWYXJpYWJsZXM6IFtdLFxuICBwbGF0Zm9ybXM6IFsnQW5kcm9pZCddLFxufSlcbkBJbmplY3RhYmxlKClcbmV4cG9ydCBjbGFzcyBCaW9tZXRyaWNXcmFwcGVyIGV4dGVuZHMgQXdlc29tZUNvcmRvdmFOYXRpdmVQbHVnaW4ge1xuICAvKipcbiAgICogVGhpcyBmdW5jdGlvbiBhY3RpdmF0ZSBpcmlzIGFjdGl2aXR5XG4gICAqXG4gICAqIEBwYXJhbSBhcmdzXG4gICAqIEByZXR1cm5zIHtQcm9taXNlPGFueT59IFJldHVybnMgYSBwcm9taXNlIHRoYXQgcmVzb2x2ZXMgd2hlbiBpcmlzIGRhdGEgY2FwdHVyZWRcbiAgICovXG4gIEBDb3Jkb3ZhKClcbiAgYWN0aXZhdGVJcmlzKGFyZ3M6IGFueSk6IFByb21pc2U8YW55PiB7XG4gICAgcmV0dXJuO1xuICB9XG5cbiAgLyoqXG4gICAqIFRoaXMgZnVuY3Rpb24gYWN0aXZhdGUgZmluZ2VycHJpbnQgYWN0aXZpdHlcbiAgICpcbiAgICogQHBhcmFtIGFyZ3NcbiAgICogQHJldHVybnMge1Byb21pc2U8YW55Pn0gUmV0dXJucyBhIHByb21pc2UgdGhhdCByZXNvbHZlcyB3aGVuIEZQIGRhdGEgY2FwdHVyZWRcbiAgICovXG4gIEBDb3Jkb3ZhKClcbiAgYWN0aXZhdGVGaW5nZXJwcmludChhcmdzOiBhbnkpOiBQcm9taXNlPGFueT4ge1xuICAgIHJldHVybjtcbiAgfVxufVxuIl19

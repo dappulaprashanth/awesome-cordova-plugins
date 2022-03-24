@@ -1,0 +1,25 @@
+import { __extends } from "tslib";
+import { Injectable } from '@angular/core';
+import { AwesomeCordovaNativePlugin, cordova } from '@awesome-cordova-plugins/core';
+import { Observable } from 'rxjs';
+var GoogleNearby = /** @class */ (function (_super) {
+    __extends(GoogleNearby, _super);
+    function GoogleNearby() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    GoogleNearby.prototype.publish = function (message) { return cordova(this, "publish", {}, arguments); };
+    GoogleNearby.prototype.subscribe = function () { return cordova(this, "subscribe", { "observable": true, "clearFunction": "unsubscribe" }, arguments); };
+    GoogleNearby.pluginName = "GoogleNearby";
+    GoogleNearby.plugin = "cordova-plugin-google-nearby";
+    GoogleNearby.pluginRef = "window.nearby";
+    GoogleNearby.repo = "https://github.com/hahahannes/cordova-plugin-google-nearby";
+    GoogleNearby.install = "ionic cordova plugin add cordova-plugin-google-nearby --variable API_KEY=\"123456789\"";
+    GoogleNearby.installVariables = ["API_KEY"];
+    GoogleNearby.platforms = ["Android"];
+    GoogleNearby.decorators = [
+        { type: Injectable }
+    ];
+    return GoogleNearby;
+}(AwesomeCordovaNativePlugin));
+export { GoogleNearby };
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi8uLi8uLi8uLi8uLi9zcmMvQGF3ZXNvbWUtY29yZG92YS1wbHVnaW5zL3BsdWdpbnMvZ29vZ2xlLW5lYXJieS9uZ3gvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBLE9BQU8sRUFBRSxVQUFVLEVBQUUsTUFBTSxlQUFlLENBQUM7QUFDM0MsT0FBTyx1Q0FBK0MsTUFBTSwrQkFBK0IsQ0FBQztBQUM1RixPQUFPLEVBQUUsVUFBVSxFQUFFLE1BQU0sTUFBTSxDQUFDOztJQWdDQSxnQ0FBMEI7Ozs7SUFRMUQsOEJBQU8sYUFBQyxPQUFlO0lBYXZCLGdDQUFTOzs7Ozs7Ozs7Z0JBdEJWLFVBQVU7O3VCQWpDWDtFQWtDa0MsMEJBQTBCO1NBQS9DLFlBQVkiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBJbmplY3RhYmxlIH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5pbXBvcnQgeyBDb3Jkb3ZhLCBBd2Vzb21lQ29yZG92YU5hdGl2ZVBsdWdpbiwgUGx1Z2luIH0gZnJvbSAnQGF3ZXNvbWUtY29yZG92YS1wbHVnaW5zL2NvcmUnO1xuaW1wb3J0IHsgT2JzZXJ2YWJsZSB9IGZyb20gJ3J4anMnO1xuXG4vKipcbiAqIEBuYW1lIEdvb2dsZSBOZWFyYnlcbiAqIEBkZXNjcmlwdGlvblxuICogVGhpcyBwbHVnaW4gYWRkcyBzdXBwb3J0IGZvciB0aGUgR29vZ2xlIE5lYXJieSBNZXNzYWdlcyBBUEkuXG4gKiBAdXNhZ2VcbiAqIGBgYHR5cGVzY3JpcHRcbiAqIGltcG9ydCB7IEdvb2dsZU5lYXJieSB9IGZyb20gJ0Bhd2Vzb21lLWNvcmRvdmEtcGx1Z2lucy9nb29nbGUtbmVhcmJ5L25neCc7XG4gKlxuICpcbiAqIGNvbnN0cnVjdG9yKHByaXZhdGUgZ29vZ2xlTmVhcmJ5OiBHb29nbGVOZWFyYnkpIHsgfVxuICpcbiAqIHRoaXMuZ29vZ2xlTmVhcmJ5LnB1Ymxpc2goJ0hlbGxvJylcbiAqICAgLnRoZW4oKHJlczogYW55KSA9PiBjb25zb2xlLmxvZyhyZXMpKVxuICogICAuY2F0Y2goKGVycm9yOiBhbnkpID0+IGNvbnNvbGUuZXJyb3IoZXJyb3IpKTtcbiAqXG4gKiB0aGlzLmdvb2dsZU5lYXJieS5zdWJzY3JpYmUoKVxuICogICAudGhlbigocmVzOiBhbnkpID0+IGNvbnNvbGUubG9nKHJlcykpXG4gKiAgIC5jYXRjaCgoZXJyb3I6IGFueSkgPT4gY29uc29sZS5lcnJvcihlcnJvcikpO1xuICogYGBgXG4gKi9cbkBQbHVnaW4oe1xuICBwbHVnaW5OYW1lOiAnR29vZ2xlTmVhcmJ5JyxcbiAgcGx1Z2luOiAnY29yZG92YS1wbHVnaW4tZ29vZ2xlLW5lYXJieScsXG4gIHBsdWdpblJlZjogJ3dpbmRvdy5uZWFyYnknLFxuICByZXBvOiAnaHR0cHM6Ly9naXRodWIuY29tL2hhaGFoYW5uZXMvY29yZG92YS1wbHVnaW4tZ29vZ2xlLW5lYXJieScsXG4gIGluc3RhbGw6ICdpb25pYyBjb3Jkb3ZhIHBsdWdpbiBhZGQgY29yZG92YS1wbHVnaW4tZ29vZ2xlLW5lYXJieSAtLXZhcmlhYmxlIEFQSV9LRVk9XCIxMjM0NTY3ODlcIicsXG4gIGluc3RhbGxWYXJpYWJsZXM6IFsnQVBJX0tFWSddLFxuICBwbGF0Zm9ybXM6IFsnQW5kcm9pZCddLFxufSlcbkBJbmplY3RhYmxlKClcbmV4cG9ydCBjbGFzcyBHb29nbGVOZWFyYnkgZXh0ZW5kcyBBd2Vzb21lQ29yZG92YU5hdGl2ZVBsdWdpbiB7XG4gIC8qKlxuICAgKiBQdWJsaXNoIGEgbWVzc2FnZVxuICAgKlxuICAgKiBAcGFyYW0gbWVzc2FnZSB7c3RyaW5nfSBNZXNzYWdlIHRvIHB1Ymxpc2hcbiAgICogQHJldHVybnMge1Byb21pc2U8YW55Pn0gUmV0dXJucyBhIHByb21pc2UgdGhhdCByZXNvbHZlcyB3aGVuIHRoZSBtZXNzYWdlIGdvdCBwdWJsaXNoZWRcbiAgICovXG4gIEBDb3Jkb3ZhKClcbiAgcHVibGlzaChtZXNzYWdlOiBzdHJpbmcpOiBQcm9taXNlPGFueT4ge1xuICAgIHJldHVybjtcbiAgfVxuXG4gIC8qKlxuICAgKiBTdWJzY3JpYmUgdG8gcmVjZWl2ZSBtZXNzYWdlc1xuICAgKlxuICAgKiBAcmV0dXJucyB7T2JzZXJ2YWJsZTxhbnk+fSBSZXR1cm5zIGFuIG9ic2VydmFibGUgdGhhdCBlbWl0cyByZWNlaXZlZCBtZXNzYWdlc1xuICAgKi9cbiAgQENvcmRvdmEoe1xuICAgIG9ic2VydmFibGU6IHRydWUsXG4gICAgY2xlYXJGdW5jdGlvbjogJ3Vuc3Vic2NyaWJlJyxcbiAgfSlcbiAgc3Vic2NyaWJlKCk6IE9ic2VydmFibGU8YW55PiB7XG4gICAgcmV0dXJuO1xuICB9XG59XG4iXX0=
