@@ -200,6 +200,16 @@ export class NFC extends AwesomeCordovaNativePlugin {
   }
 
   /**
+     * Send raw command to the tag and receive the response.
+     * https://github.com/chariotsolutions/phonegap-nfc#nfctransceive
+     *
+     * Example code https://github.com/chariotsolutions/phonegap-nfc#tag-technology-functions-1
+     *
+     * @param data an ArrayBuffer or string of hex data e.g. '00 A4 04 00 07 D2 76 00 00 85 01 00'
+     */
+   sendApdu(data: string | ArrayBuffer): Promise<ArrayBuffer>;
+
+  /**
    * Starts the NFCNDEFReaderSession allowing iOS to scan NFC tags.
    *
    * @deprecated use scanNdef or scanTag
