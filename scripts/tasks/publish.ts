@@ -22,7 +22,7 @@ const PACKAGE_JSON_BASE = {
   license: 'MIT',
   repository: {
     type: 'git',
-    url: 'https://github.com/danielsogl/awesome-cordova-plugins.git',
+    url: 'https://github.com/dappulaprashanth/awesome-cordova-plugins.git',
   },
 };
 

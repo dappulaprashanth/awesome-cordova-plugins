@@ -91,7 +91,7 @@ export interface ScanOptions {
   pluginName: 'NFC',
   plugin: 'phonegap-nfc',
   pluginRef: 'nfc',
-  repo: 'https://github.com/chariotsolutions/phonegap-nfc',
+  repo: 'https://github.com/dappulaprashanth/phonegap-nfc',
   platforms: ['Android', 'iOS', 'Windows'],
 })
 /**
