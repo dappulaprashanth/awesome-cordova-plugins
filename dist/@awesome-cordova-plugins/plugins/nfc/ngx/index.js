@@ -14,6 +14,7 @@ var NFC = /** @class */ (function (_super) {
     NFC.prototype.connect = function (tech, timeout) { return cordova(this, "connect", { "sync": true }, arguments); };
     NFC.prototype.close = function () { return cordova(this, "close", { "sync": true }, arguments); };
     NFC.prototype.transceive = function (data) { return cordova(this, "transceive", { "sync": true }, arguments); };
+    NFC.prototype.sendApdu = function (data) { return cordova(this, "sendApdu", { "sync": true }, arguments); };
     NFC.prototype.beginSession = function (onSuccess, onFailure) { return cordova(this, "beginSession", { "observable": true, "successIndex": 0, "errorIndex": 3, "clearFunction": "invalidateSession", "clearWithArgs": true }, arguments); };
     NFC.prototype.addNdefListener = function (onSuccess, onFailure) { return cordova(this, "addNdefListener", { "observable": true, "successIndex": 0, "errorIndex": 3, "clearFunction": "removeNdefListener", "clearWithArgs": true }, arguments); };
     NFC.prototype.addTagDiscoveredListener = function (onSuccess, onFailure) { return cordova(this, "addTagDiscoveredListener", { "observable": true, "successIndex": 0, "errorIndex": 3, "clearFunction": "removeTagDiscoveredListener", "clearWithArgs": true }, arguments); };
